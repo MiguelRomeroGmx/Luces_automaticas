@@ -1,4 +1,6 @@
 
+
+// Declaración de variables
 const int interruptor = 13;
 const int pinSensor = 3;
 const int pinfoco = 4;
@@ -9,18 +11,21 @@ int modo;
 int activar;
 int desactivar;
 
+
+
+
 void setup() {
-  Serial.begin(9600);
-  pinMode(interruptor, INPUT);
-  pinMode(pinSensor, INPUT);
-  pinMode(pinfoco, OUTPUT);
-  digitalWrite(pinfoco, LOW);
+  Serial.begin(9600);  // inicialización del puerto serial
+  pinMode(interruptor, INPUT); // Pin 13 como entrada
+  pinMode(pinSensor, INPUT); // Pin 3 como entrada
+  pinMode(pinfoco, OUTPUT); // Pin  4 como salida
+  digitalWrite(pinfoco, LOW); // Pin 4 en estado bajo
   //lectura = 0;
 }
 
 void loop() {
 
-modo = digitalRead(interruptor);
+modo = digitalRead(interruptor); //
 
 if(modo == 0){
   
