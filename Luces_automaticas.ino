@@ -1,5 +1,8 @@
 
 
+
+
+
 // Declaración de variables
 const int interruptor = 13;
 const int pinSensor = 3;
@@ -54,7 +57,7 @@ if(modo == 0){
 
         delay(100);
         activar = activar + 1;
-        modo = digitalRead(interruptor);
+        modo = digitalRead(interruptor);  // cambio de modo
               if (modo == 1){
                     delay(100);
                     activar = activar + 1;
